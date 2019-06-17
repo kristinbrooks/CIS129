@@ -16,7 +16,7 @@
 
 import java.io.*;
 
-public class JavaLab1 {
+public class CIS129_KristinBrooks_Lab1_1 {
 
     public static void main(String[] args) {
         // first we define our input streams.
