@@ -29,11 +29,11 @@ public class JavaLab1 {
       // an exception would be entering a string when a number is expected
       try {
             System.out.println("what is your name?");
-            
+
             // we read a string from the stream
-            sName = reader.readLine();  
-            
-         
+            sName = reader.readLine();
+
+
             System.out.println(sName+" ,what is your age?");
             // parseint will transform a string i.e."123" into a number 123
             motherAge = Integer.parseInt(reader.readLine());
