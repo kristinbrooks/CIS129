@@ -4,7 +4,7 @@
  * Module 2: Pseudocode 2
  * Due 6-16-19
  *
- * This program determines how much moneythe user needs to be save to accomodate
+ * This program determines how much money the user needs to be save to accomodate
  * having 5 of their family members visit for fours weeks. It takes into account
  * the regular bills and the fact that the family has 3 teenagers that
  * consume varying amounts of food.
