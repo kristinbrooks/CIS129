@@ -1,6 +1,6 @@
-CIS129_KristinBrooks_Lab1_readme
+CIS129_KristinBrooks_Lab1readme
 ________________________________________________
-Original Authors: Odile wolf, Olusola Samuel-Ojo
+Original Authors: Odile Wolf, Olusola Samuel-Ojo
 Edited by Kristin Brooks
 
 Date created: Jan 15th, 2014
@@ -17,7 +17,7 @@ when their child was born.
 USAGE INSTRUCTIONS and COMMAND SYNTAXES
 ________________________________________________
 Compilation:  javac CIS129_KristinBrooks_Lab1.java
-Execution:    java CIS129_KristinBrooks_Lab1_1
+Execution:    java CIS129_KristinBrooks_Lab1
 
 
 CODING DECISIONS / UPDATES

@@ -1,42 +1,65 @@
 /*************************************************************************
- * Kristin Brooks
- * CIS129
- * Due Date: 6/23/19
+ *  Kristin Brooks
+ *  CIS129
+ *  Due Date: 6/30/19
  *
- * This program determines if an airline passenger is
- * eligible for a 20% discount.
+ *  The purpose of this program is to...
+ *
+ * You will then modify it to accept cookieNames which contain chocolate and/or peanut butter, but don't contain gluten
+ * What is the name of the cookieName? Peanut butter jelly thumb
+ * Does it contain chocolate? no
+ * Does it contain gluten? no
+ * Does it contain peanut butter? yes
+ * thank you, I love Peanut butter jelly thumb
+ * NOTE: I have put a lot of comments to guide you in the code.
  *************************************************************************/
 
-import javax.swing.*;
+import java.io.*;
 
 public class CIS129_KristinBrooks_Lab2 {
-    public static void main(String args[])
-    {
-        String passengerName = ""; 	// Passenger's name.
-        String ageString = "";    // String version of passenger's age.
-        int passengerAge = 0; 	// Passenger's age.
 
-        // This is the work done in the housekeeping() method
-        passengerName = JOptionPane.showInputDialog("Enter passenger's name: ");
-        ageString = JOptionPane.showInputDialog("Enter passenger's age: ");
+    public static void main(String[] args) {
+        // first we define our input streams.
+        InputStreamReader input = new InputStreamReader(System.in);
+        BufferedReader reader = new BufferedReader(input);
 
-        passengerAge = Integer.parseInt(ageString);
+        // declarations
+        String cookieName ;
+        String containsChocolate, containsPeanutButter, containsGluten;
 
-        // Check for input errors. For example, check for negative age condition.
-        if (passengerAge < 0) {
-            System.out.println("ERROR. " + passengerAge + " is an invalid age. Please start over.");
-            System.exit(0);
+        // we catch exceptions if some are thrown.
+        try {
+            // prompt the user for the cookie's name and read the input
+            System.out.println("What is the name of the cookie?");
+            cookieName = reader.readLine();
+
+            // prompt the user for the cookie's contents and read the input
+            System.out.println("Does it contain chocolate? yes/no");
+            containsChocolate = reader.readLine();
+
+            System.out.println("Does it contain gluten? yes/no");
+            containsGluten = reader.readLine();
+
+            System.out.println("Does it contain peanut butter? yes/no");
+            containsPeanutButter = reader.readLine();
+
+            // determine if it can be eaten or not depending on the contents
+            if (containsGluten.compareToIgnoreCase("yes") == 0
+                   || (containsChocolate.compareToIgnoreCase("no") == 0
+                    && containsPeanutButter.compareToIgnoreCase("no") == 0)) {
+                System.out.println("I'm sorry, I can't eat it.");
+            } else {
+                System.out.println("Thank you, I love " + cookieName + ".");
+            }
+
+        } catch (IOException e){
+            System.out.println("Error reading from user");
         }
 
-        // Test to see if this customer is eligible for a 20% discount.
-        if (passengerAge <= 7 || passengerAge >= 65) {
-            System.out.println(passengerName + " is eligible for a 20% discount.");
-        } else {
-            System.out.println(passengerName + " is not eligible for a discount.");
-        }
-
-        System.exit(0);
     }
 
+    /**************FUNCTIONS***************/
+
 }
+
 

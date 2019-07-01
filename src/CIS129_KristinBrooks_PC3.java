@@ -88,7 +88,7 @@ public class CIS129_KristinBrooks_PC3 {
                 baseTotal = baseCost + baseLabor;
                 trimCost = cost(trimGallons) + trimPremium;
             }
-            
+
             // find out if they want a faux finish
             display("Do you want a faux finish?");
             fauxFinish = reader.readLine();
