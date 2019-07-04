@@ -10,7 +10,6 @@
 
 // this is used to allow us to use classes in all the libraries of java.io
 import java.io.*;
-//import java.lang.Math;
 import java.text.NumberFormat;
 
 public class CIS129_KristinBrooks_PC3 {
