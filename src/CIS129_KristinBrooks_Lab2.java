@@ -20,7 +20,7 @@ public class CIS129_KristinBrooks_Lab2 {
 
         // declarations
         String cookieName ;
-        String containsChocolate, containsPeanutButter, containsGluten;
+        String chocolateInput, peanutButterInput, glutenInput;
 
         // we catch exceptions if some are thrown.
         try {
@@ -31,21 +31,19 @@ public class CIS129_KristinBrooks_Lab2 {
             // prompt the user for the cookie's contents and read the inputs
             // test to make sure the input is valid (yes or no)
             System.out.println("Does it contain chocolate? yes/no");
-            containsChocolate = reader.readLine();
-            validInput(containsChocolate);
+            chocolateInput = reader.readLine();
+            validInput(chocolateInput);
 
             System.out.println("Does it contain gluten? yes/no");
-            containsGluten = reader.readLine();
-            validInput(containsGluten);
+            glutenInput = reader.readLine();
+            validInput(glutenInput);
 
             System.out.println("Does it contain peanut butter? yes/no");
-            containsPeanutButter = reader.readLine();
-            validInput(containsPeanutButter);
+            peanutButterInput = reader.readLine();
+            validInput(peanutButterInput);
 
             // determine if it can be eaten or not depending on the contents
-            if (containsGluten.compareToIgnoreCase("yes") == 0
-                   || (containsChocolate.compareToIgnoreCase("no") == 0
-                    && containsPeanutButter.compareToIgnoreCase("no") == 0)) {
+            if (cannotEat(chocolateInput, peanutButterInput, glutenInput)) {
                 System.out.println("I'm sorry, I can't eat it.");
             } else {
                 System.out.println("Thank you, I love " + cookieName + ".");
@@ -58,12 +56,25 @@ public class CIS129_KristinBrooks_Lab2 {
     }
 
     /**************FUNCTIONS***************/
+
+    // tells the user their input was invalid and exits the program if they didn't answer with yes or no
     public static void validInput(String contentsAnswer) {
         if (!(contentsAnswer.compareToIgnoreCase("yes") == 0 || contentsAnswer.compareToIgnoreCase("no") == 0)) {
             System.out.println("That is not a valid input. Please start over.");
             System.exit(0);
         }
     }
+
+    // determines if they entered something that makes them unable to eat the cookie
+    private static boolean cannotEat(String chocolateInput, String peanutButterInput, String glutenInput) {
+        if (glutenInput.compareToIgnoreCase("yes") == 0) {
+            // guard clause
+            return true;
+        }
+        return chocolateInput.compareToIgnoreCase("no") == 0
+                && peanutButterInput.compareToIgnoreCase("no") == 0;
+    }
+
 }
 
 
