@@ -3,15 +3,10 @@
  *  CIS129
  *  Due Date: 6/30/19
  *
- *  The purpose of this program is to...
- *
- * You will then modify it to accept cookieNames which contain chocolate and/or peanut butter, but don't contain gluten
- * What is the name of the cookieName? Peanut butter jelly thumb
- * Does it contain chocolate? no
- * Does it contain gluten? no
- * Does it contain peanut butter? yes
- * thank you, I love Peanut butter jelly thumb
- * NOTE: I have put a lot of comments to guide you in the code.
+ *  The purpose of this program is to determine if a cookie will be eaten
+ *  based on whether it contains chocolate, gluten, or peanut butter.
+ *  Cookies will be eaten if they contain chocolate and/or peanut butter,
+ *  but not gluten.
  *************************************************************************/
 
 import java.io.*;
@@ -33,15 +28,19 @@ public class CIS129_KristinBrooks_Lab2 {
             System.out.println("What is the name of the cookie?");
             cookieName = reader.readLine();
 
-            // prompt the user for the cookie's contents and read the input
+            // prompt the user for the cookie's contents and read the inputs
+            // test to make sure the input is valid (yes or no)
             System.out.println("Does it contain chocolate? yes/no");
             containsChocolate = reader.readLine();
+            validInput(containsChocolate);
 
             System.out.println("Does it contain gluten? yes/no");
             containsGluten = reader.readLine();
+            validInput(containsGluten);
 
             System.out.println("Does it contain peanut butter? yes/no");
             containsPeanutButter = reader.readLine();
+            validInput(containsPeanutButter);
 
             // determine if it can be eaten or not depending on the contents
             if (containsGluten.compareToIgnoreCase("yes") == 0
@@ -59,7 +58,12 @@ public class CIS129_KristinBrooks_Lab2 {
     }
 
     /**************FUNCTIONS***************/
-
+    public static void validInput(String contentsAnswer) {
+        if (!(contentsAnswer.compareToIgnoreCase("yes") == 0 || contentsAnswer.compareToIgnoreCase("no") == 0)) {
+            System.out.println("That is not a valid input. Please start over.");
+            System.exit(0);
+        }
+    }
 }
 
 
