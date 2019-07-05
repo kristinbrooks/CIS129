@@ -31,18 +31,23 @@ public class CIS129_KristinBrooks_PC5 {
             System.out.println("\nPlease enter the employee's hourly pay rate.");
             payRate = Double.parseDouble(reader.readLine());
 
+            // give user an error message if the entered pay rate isn't in the accepted range
+            // and have them reenter a new rate.
             while (payRate < 7.5 || payRate > 18.25) {
                 System.out.println("\nERROR. Invalid pay rate. Please enter an hourly rate between $7.50 " +
                         "and $18.25.");
                 payRate = Double.parseDouble(reader.readLine());
             }
 
+            // ask user for the number of hours worked. if the number is out of range have them enter
+            // a new number
             do {
                 System.out.println("\nPlease enter the number of hours between 0 and 40 that the " +
                         "employee worked for the week.");
                 hoursWorked = Double.parseDouble(reader.readLine());
             } while (hoursWorked < 0 || hoursWorked > 40);
 
+            // calculate gross pay and display it for the user
             grossPay = payRate * hoursWorked;
             System.out.println("\nThe employee's weekly gross pay is " + formatter.format(grossPay) + ".\n");
 
