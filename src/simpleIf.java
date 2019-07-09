@@ -7,7 +7,7 @@
 // this is used to allow us to use classes in all the libraries of java.io
 import java.io.*;
 
-public class exampleIf {
+public class simpleIf {
   
   public static void main(String[] args) {
     // first we define our input streams.

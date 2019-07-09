@@ -8,7 +8,7 @@
 // this is used to allow us to use classes in all the libraries of java.io
 import java.io.*;
 
-public class inputValidation1Posttest {
+public class inputValidation1 {
   
   public static void main(String[] args) {
     // first we define our input streams.
@@ -19,11 +19,8 @@ public class inputValidation1Posttest {
     int myAge;
     // we catch exceptions if some are thrown.
     try {
-     
-      do {
-         System.out.println("Please enter an age between 0 and 150");
-         myAge = Integer.parseInt(reader.readLine());
-      }while (myAge <0  || myAge >150) ;
+      System.out.println("Please enter your age");
+      myAge = Integer.parseInt(reader.readLine());
       
       System.out.println("Your age is "+ myAge);
       
