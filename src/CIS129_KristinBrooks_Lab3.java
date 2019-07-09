@@ -4,7 +4,7 @@
  *  Due: 7/14/19
  *
  *  The purpose of this program is to find the highest run of positive
- *  and even numbers higher than 100. 
+ *  and even numbers higher than 100.
  *************************************************************************/
 
 import java.io.BufferedReader;
@@ -76,7 +76,7 @@ public class CIS129_KristinBrooks_Lab3 {
         return true;
     }
 
-    // this function plays the user through one run of the game
+    // this function plays the user through one run of the game and returns the total for the run
     public static int singleRunTotal(int count) {
         // define the input streams.
         InputStreamReader input = new InputStreamReader(System.in);
