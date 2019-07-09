@@ -4,12 +4,7 @@
  *  Due: 7/14/19
  *
  *  The purpose of this program is to find the highest run of positive
- *  and even numbers higher than 100. The program will ask the user for
- *  numbers and add them. As soon as the sum of the numbers reaches 100
- *  or the total number of numbers entered is 5 or greater, the program
- *  will stop asking for numbers and tell the user what their total
- *  for this run is. It will also ask if they want to play again and
- *  tell them what their highest run was.
+ *  and even numbers higher than 100. 
  *************************************************************************/
 
 import java.io.BufferedReader;
