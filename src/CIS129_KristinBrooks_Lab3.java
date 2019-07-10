@@ -67,7 +67,7 @@ public class CIS129_KristinBrooks_Lab3 {
     // it is valid if it is a positive, even number
     public static Boolean inputValid(int number) {
         if (number <= 0) {
-            System.out.println("\nNegative numbers are not allowed. Please enter a positive number:");
+            System.out.println("\nNegative numbers (and zero) are not allowed. Please enter a positive number:");
             return false;
         } else if (number % 2 != 0) {
             System.out.println("\nOdd numbers are not allowed. Please enter an even number:");
