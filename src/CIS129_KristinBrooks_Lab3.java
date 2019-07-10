@@ -20,7 +20,7 @@ public class CIS129_KristinBrooks_Lab3 {
 
         // variable declarations
         String name, answer;
-        int currentRun;
+        int currentTotal;
         int maxRun = 0;
 
         // catch exceptions if some are thrown.
@@ -38,12 +38,13 @@ public class CIS129_KristinBrooks_Lab3 {
 
             // this loop will repeatedly run the game until the user says they don't want to continue playing
             do {
+                // loop declaration
                 int count = 1;
 
-                currentRun = singleRunTotal(count);
+                currentTotal = singleRunTotal(count);
 
-                if (currentRun > maxRun) {
-                    maxRun = currentRun;
+                if (currentTotal > maxRun) {
+                    maxRun = currentTotal;
                 }
 
                 System.out.println("Do you want to play again? yes/no");
