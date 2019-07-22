@@ -10,10 +10,10 @@
  ****************************************************************/
 
 public class CIS129_KristinBrooks_PC7_1b {
-    
+
     public static void main(String[] args) {
         // create instances of the new class
-        // one is declared with it's data, the other two are given data below with 'set' functions
+        // one is declared with its data, the other two are given data below with 'set' functions
         CIS129_KristinBrooks_PC7_1a kristin = new CIS129_KristinBrooks_PC7_1a("Kristin Brooks",
                 "1931 N Tucker Drive,", "Tucson", "AZ", "85916", 37,
                 "5039614774");
@@ -35,18 +35,15 @@ public class CIS129_KristinBrooks_PC7_1b {
         // printing out everyone's info using the 'get' functions
         // this will verify the class is working as designed
         System.out.println(kristin.getName() + "\n" + kristin.getAddress() + "\n" +
-                kristin.getAge() + kristin.getPhoneNumber());
+                kristin.getAge() + "\n" + kristin.getPhoneNumber());
         System.out.println();
         System.out.println();
         System.out.println(chad.getName() + "\n" + chad.getAddress() + "\n" +
-                chad.getAge() + chad.getPhoneNumber());
+                chad.getAge() + "\n" + chad.getPhoneNumber());
         System.out.println();
         System.out.println();
         System.out.println(kt.getName() + "\n" + kt.getAddress() + "\n" +
-                kt.getAge() + kt.getPhoneNumber());
-
-
-
+                kt.getAge() + "\n" + kt.getPhoneNumber());
     }
 
 }
