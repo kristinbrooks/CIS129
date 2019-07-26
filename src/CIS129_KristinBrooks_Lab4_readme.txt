@@ -1,15 +1,17 @@
 CIS129_KristinBrooks_Lab4_readme
 ________________________________________________
-Original Authors: Odile Wolf
-Edited by Kristin Brooks
+Original Author: Kristin Brooks
 
-Date created: Aug 15th, 2014
-Updated: July 28th, 2019
+Date created: July 28th, 2019
 
 
 DESCRIPTION
 ________________________________________________
-The purpose of the program is
+The purpose of this program is to print out monthly rental
+slips for the renters of 5 different apartments. The slips
+will list the renter's name, their apartment number, the
+month and day rent is due, and when they will be charged a
+late fee.
 
 USAGE INSTRUCTIONS and COMMAND SYNTAXES
 ________________________________________________
@@ -17,9 +19,15 @@ Compilation:  javac CIS129_KristinBrooks_Lab4.java
 Execution:    java CIS129_KristinBrooks_Lab4
 
 
-CODING DECISIONS / UPDATES
+STATUS / PROBLEMS
 ________________________________________________
-The original code
+The lab is complete and works as requested in the assignment
+description. It also displays the same as the examples shown
+in the assignment description.
 
-
-7/28/19 The code was edited to 
+The only problem I encountered was that after the first compile
+I was booted out of my function with an error when I ran it.
+The fix was easy. I looked at the line number in the error
+message and saw that I had entered `NUM_MONTHS` into `months[]`
+in my print lines instead of `subscript`. After fixing this
+and recompiling everything worked as designed.  
